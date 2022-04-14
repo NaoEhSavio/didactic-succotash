@@ -1,12 +1,17 @@
 {
-    "name": "oauth2",
-    "version": "1.0.0",
-    "description": "Basic OAuth2 Example",
-    "private": true,
-    "main": "app.js",
+    "name": "auth",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "prestart": "npm run build",
+        "start": "node src/server.js",
+        "build": "rm -rf node_modules && rm -f package-lock.json && npm i"
+    },
     "dependencies": {
-      "btoa": "*",
-      "express": "*",
-      "snekfetch": "*"
+        "axios": "^0.20.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.6.0",
+        "express": "^4.17.1"
     }
-  }
+}
